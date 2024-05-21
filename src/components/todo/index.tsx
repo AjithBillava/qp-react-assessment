@@ -14,16 +14,18 @@ const Todo = ({ todo }:todoProps) => {
   };
 
   return (
-      <label htmlFor={`todo_${todo?.title}`}>
+      <div>
+        <label htmlFor={`${todo.id}`}>
         {todo.title}
         <input
           type="checkbox"
           onChange={(e) => handleUpdateTodo(todo.id, e)}
           checked={todo.isCompleted}
-          name={todo.title}
+          name={`todo_${todo?.title}_${todo.id}`}
           id={`${todo.id}`}
         />
       </label>
+      </div>
     
   );
 };

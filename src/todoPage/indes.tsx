@@ -13,12 +13,12 @@ const TodoPage = () => {
     const handleAddToDo = () =>{
         const newIndex = todoList.length
 
-       dispatch(addTodo({
+        todoInput && dispatch(addTodo({
             id:newIndex,
             title:todoInput,
             isCompleted:false
         }))
-        setTodoInput('')
+        todoInput && setTodoInput('')
 
     }
     const handleAddToDoOnEnter = (e?:React.KeyboardEvent<HTMLInputElement>) =>{
@@ -40,7 +40,7 @@ const TodoPage = () => {
     
 
   return (
-    <div>
+    <div style={{height:'90vh',width:'100vw',}}>
        <label htmlFor="todo input">
        <input value={todoInput} onChange={(e)=>handleChange(e)} onKeyDown={(e)=>handleAddToDoOnEnter(e)} type="text" placeholder='Add your todo' />
        <button onClick={()=>handleAddToDo()} type="button">Add to do</button>
