@@ -7,9 +7,7 @@ export interface todo {
 }
 
 const totalCount = 10000;
-// const sampleTodod : todo={
-//     id
-// }
+
 const initialState: todo[] = Array(totalCount)
   .fill()
   .map((_item: todo, idx: number): todo => {

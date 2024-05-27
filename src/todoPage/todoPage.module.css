@@ -1,0 +1,12 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    height:90vh;
+    /* width:100%;  */
+    justify-content: center;
+    align-items: center;
+}
+
+.todoButton{
+    margin-left: 20px;
+}

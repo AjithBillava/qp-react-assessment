@@ -3,7 +3,7 @@ import TodoList from '../components/todoList'
 import { useDispatch, useSelector } from 'react-redux'
 import { addTodo } from '../components/todoList/todoSlice';
 import { RootState } from '../app/store';
-
+import styles from './todoPage.module.css';
 const TodoPage = () => {
 
     const [todoInput, setTodoInput] = useState('')
@@ -40,10 +40,13 @@ const TodoPage = () => {
     
 
   return (
-    <div style={{height:'90vh',width:'100vw',}}>
-       <label htmlFor="todo input">
-       <input value={todoInput} onChange={(e)=>handleChange(e)} onKeyDown={(e)=>handleAddToDoOnEnter(e)} type="text" placeholder='Add your todo' />
-       <button onClick={()=>handleAddToDo()} type="button">Add to do</button>
+    <div className={styles.container}>
+        <div>
+            <h2>Virtualized Todos...</h2>
+        </div>
+       <label htmlFor="todoInput">
+       <input value={todoInput} id='todoInput' onChange={(e)=>handleChange(e)} onKeyDown={(e)=>handleAddToDoOnEnter(e)} type="text" placeholder='Add your todo' />
+       <button className={styles.todoButton} onClick={()=>handleAddToDo()} type="button">Add to do</button>
        </label>
        <TodoList/>
 

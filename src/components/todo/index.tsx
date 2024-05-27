@@ -21,6 +21,7 @@ const Todo = ({ todo }:todoProps) => {
           type="checkbox"
           onChange={(e) => handleUpdateTodo(todo.id, e)}
           checked={todo.isCompleted}
+          style={{marginLeft:'1rem'}}
           name={`todo_${todo?.title}_${todo.id}`}
           id={`${todo.id}`}
         />

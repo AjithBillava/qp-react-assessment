@@ -1,0 +1,11 @@
+.list{
+    display: flex;
+    height: 100%;
+    width: 50%;
+
+    justify-content: center;
+    
+    margin-top: 2rem;
+    margin-right: 3rem;
+    
+}
